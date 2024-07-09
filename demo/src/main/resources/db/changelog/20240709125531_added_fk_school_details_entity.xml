@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="75b83dbf-a519-4cc2-9dd8-fdc087ed981e" author="Logu">
+        <addColumn tableName="student" >
+            <column name="school_id" type="BIGINT">
+<!--                <constraints nullable=""/>-->
+            </column>
+        </addColumn>
+        <addForeignKeyConstraint
+                baseTableName="student"
+                baseColumnNames="school_id"
+                constraintName="fk_school_id"
+                referencedTableName="school"
+                referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

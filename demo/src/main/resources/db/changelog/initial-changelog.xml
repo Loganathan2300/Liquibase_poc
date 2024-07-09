@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="1" author="logu">
+        <createTable tableName="users">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="address" type="VARCHAR(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="number" type="BIGINT">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="logu">
+        <addColumn tableName="users">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="address" type="VARCHAR(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="number" type="BIGINT">
+                <constraints nullable="true" />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="3" author="logu">
+        <update tableName="users">
+            <column name="id" />
+            <column name="name" />
+            <column name="address" />
+            <column name="number"/>
+            <where>id=1</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="4" author="logu">
+        <dropColumn columnName="id" tableName="users"/>
+        <dropColumn columnName="name" tableName="users"/>
+        <dropColumn columnName="address" tableName="users"/>
+        <dropColumn columnName="number" tableName="users"/>
+    </changeSet>
+
+
+
+</databaseChangeLog>
