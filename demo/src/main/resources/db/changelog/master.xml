@@ -4,8 +4,6 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
-
-
     <include file="db/changelog/20240708194423_created_user_entity.xml"/>
     <include file="db/changelog/20240708202911_created_student_entity.xml"/>
     <include file="db/changelog/20240709123831_created_school_entity.xml"/>
@@ -13,6 +11,5 @@
     <include file="db/changelog/20240709154022_updated_colum_user_entity.xml"/>
     <include file="db/changelog/20240709154022_dropped_user_entity.xml"/>
     <include file="db/changelog/20240709125531_added_fk_school_details_entity.xml"/>
-
 
 </databaseChangeLog>
